@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights E-Learning Academy | Launch Website</title>
+  <meta name="description" content="Launch the Insights E-Learning Academy K–12 online tutoring website.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#003E94',
+        'on-primary': '#FFFFFF',
+        'primary-container': '#1D56B8',
+        'on-primary-container': '#FFFFFF',
+        'primary-soft': '#EEF0FF',
+        'on-primary-soft': '#002D6F',
+        'secondary': '#006C4F',
+        'on-secondary': '#FFFFFF',
+        'secondary-container': '#80F9CA',
+        'on-secondary-container': '#002116',
+        'secondary-soft': '#F4FFF7',
+        'on-secondary-soft': '#003827',
+        'tertiary': '#732F00',
+        'on-tertiary': '#FFFFFF',
+        'tertiary-container': '#FFDBCB',
+        'on-tertiary-container': '#341100',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'error-container': '#FFDAD6',
+        'on-error-container': '#410002',
+        'background': '#FAF8FF',
+        'on-background': '#191B22',
+        'surface': '#FAF8FF',
+        'surface-container-lowest': '#FFFFFF',
+        'surface-container-low': '#F3F3FC',
+        'surface-container': '#EDEDF6',
+        'surface-container-high': '#E7E7F0',
+        'on-surface': '#191B22',
+        'surface-variant': '#DFE2F1',
+        'on-surface-variant': '#434652',
+        'outline': '#737784',
+        'outline-variant': '#C3C6D5',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Spline Sans"', 'sans-serif'],
+        'headline': ['"Spline Sans"', 'sans-serif'],
+        'title': ['"Outfit"', 'sans-serif'],
+        'body': ['"Outfit"', 'sans-serif'],
+        'label': ['"Outfit"', 'sans-serif'],
+        'code': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.75px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-md': ['26px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'title-lg': ['20px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'label-md': ['13px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'code-md': ['14px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '220ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500;600;700&amp;family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-[1024px] flex items-center justify-center p-gutter-md" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <main class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 md:p-12 max-w-lg w-full text-center shadow-sm flex flex-col items-center gap-gutter-lg">
+    <span class="w-14 h-14 rounded-md bg-primary text-on-primary inline-flex items-center justify-center" aria-hidden="true">
+      <span class="material-symbols-outlined text-headline-md">school</span>
+    </span>
+
+    <div class="flex flex-col gap-gutter-sm">
+      <h1 class="font-display text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
+        Insights E-Learning Academy
+      </h1>
+      <p class="font-body text-body-md text-on-surface-variant text-pretty">
+        Personalised K–12 tutoring for CBSE, ICSE, and IGCSE students across Maths, Coding, and Psychology.
+      </p>
+    </div>
+
+    <a href="./home/Home.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-gutter-sm px-6 py-3 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors duration-state-change">
+      <span data-design-text-token="label-lg">Open Website</span>
+      <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+    </a>
+  </main>
+
+
+
+</body></html>

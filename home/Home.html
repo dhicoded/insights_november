@@ -1,0 +1,617 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights E-Learning Academy | Personalised K–12 Online Tutoring for CBSE, ICSE &amp; IGCSE</title>
+  <meta name="description" content="Personalised K–12 online tutoring for CBSE, ICSE, and IGCSE students in Maths, Psychology, Coding with Python, Web Development, and Computational Thinking.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#003E94',
+        'on-primary': '#FFFFFF',
+        'primary-container': '#1D56B8',
+        'on-primary-container': '#FFFFFF',
+        'primary-soft': '#EEF0FF',
+        'on-primary-soft': '#002D6F',
+        'secondary': '#006C4F',
+        'on-secondary': '#FFFFFF',
+        'secondary-container': '#80F9CA',
+        'on-secondary-container': '#002116',
+        'secondary-soft': '#F4FFF7',
+        'on-secondary-soft': '#003827',
+        'tertiary': '#732F00',
+        'on-tertiary': '#FFFFFF',
+        'tertiary-container': '#FFDBCB',
+        'on-tertiary-container': '#341100',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'error-container': '#FFDAD6',
+        'on-error-container': '#410002',
+        'background': '#FAF8FF',
+        'on-background': '#191B22',
+        'surface': '#FAF8FF',
+        'surface-container-lowest': '#FFFFFF',
+        'surface-container-low': '#F3F3FC',
+        'surface-container': '#EDEDF6',
+        'surface-container-high': '#E7E7F0',
+        'on-surface': '#191B22',
+        'surface-variant': '#DFE2F1',
+        'on-surface-variant': '#434652',
+        'outline': '#737784',
+        'outline-variant': '#C3C6D5',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Spline Sans"', 'sans-serif'],
+        'headline': ['"Spline Sans"', 'sans-serif'],
+        'title': ['"Outfit"', 'sans-serif'],
+        'body': ['"Outfit"', 'sans-serif'],
+        'label': ['"Outfit"', 'sans-serif'],
+        'code': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.75px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-md': ['26px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'title-lg': ['20px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'label-md': ['13px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'code-md': ['14px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '220ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500;600;700&amp;family=Outfit:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- Shared Header -->
+  <header class="sticky top-0 z-40 bg-surface-container-lowest/95 border-b border-outline-variant">
+    <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin h-20 flex items-center justify-between gap-gutter-md">
+      <a href="../home/Home.html" class="flex items-center gap-gutter-sm shrink-0">
+        <span class="w-10 h-10 rounded bg-primary text-on-primary inline-flex items-center justify-center" aria-hidden="true">
+          <span class="material-symbols-outlined">school</span>
+        </span>
+        <span class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Insights E-Learning Academy</span>
+      </a>
+
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-gutter-lg">
+        <a href="../home/Home.html" aria-current="page" class="font-label text-label-lg text-primary border-b-2 border-primary py-1">Home</a>
+        <a href="../courses-offered/CoursesOffered.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Courses Offered</a>
+        <a href="../our-team/OurTeam.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Our Team</a>
+        <a href="../blog/Blog.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Blog</a>
+        <a href="../contact/Contact.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-gutter-sm">
+        <a href="../contact/Contact.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="hidden sm:inline-flex items-center justify-center gap-gutter-xs px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors duration-state-change">
+          <span data-design-text-token="label-lg">Book a Free Consultation</span>
+        </a>
+
+        <button id="mobile-menu-btn" data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container-low">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-outline-variant px-gutter-md py-gutter-md">
+      <nav aria-label="Mobile navigation" class="flex flex-col gap-gutter-sm">
+        <a href="../home/Home.html" aria-current="page" class="px-3 py-2 rounded bg-primary-soft text-primary font-label text-label-lg">Home</a>
+        <a href="../courses-offered/CoursesOffered.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Courses Offered</a>
+        <a href="../our-team/OurTeam.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Our Team</a>
+        <a href="../blog/Blog.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Blog</a>
+        <a href="../contact/Contact.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Contact</a>
+        <a href="../contact/Contact.html" class="mt-gutter-xs inline-flex items-center justify-center px-5 py-3 rounded bg-primary text-on-primary font-label text-label-lg">Book a Free Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="bg-surface-container-low border-b border-outline-variant">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-12 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+        <div class="lg:col-span-7 flex flex-col gap-gutter-lg">
+          <span data-component-id="chip-with-icon" data-component-type="chip" data-component-variant="with-icon" class="self-start inline-flex items-center gap-gutter-xs px-3 py-1 rounded-full bg-secondary-soft text-on-secondary-soft border border-secondary-container font-label text-label-md">
+            <span class="material-symbols-outlined text-label-lg" aria-hidden="true">verified</span>
+            <span data-design-text-token="label-md">Trusted by K–12 Parents • CBSE, ICSE &amp; IGCSE</span>
+          </span>
+
+          <h1 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface text-balance" data-design-text-token="display-lg">
+            Personalised K–12 Tutoring for Strong Foundations and Future-Ready Skills.
+          </h1>
+
+          <p class="font-body text-body-lg text-on-surface-variant max-w-prose text-pretty" data-design-text-token="body-lg">
+            Give your child calm, structured support in Maths, Psychology, Python, Web Development, and Computational Thinking—with vetted tutors, syllabus-aligned lessons, and regular parent progress updates.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-gutter-md">
+            <a href="../contact/Contact.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-gutter-sm px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors duration-state-change">
+              <span data-design-text-token="label-lg">Book a Free Consultation</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+            <a href="https://wa.me/919148819267" target="_blank" rel="noopener noreferrer" data-component-id="button-accent" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-gutter-sm px-5 py-2.5 rounded bg-secondary text-on-secondary font-label text-label-lg hover:opacity-90 transition-opacity duration-state-change">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">chat</span>
+              <span data-design-text-token="label-lg">Chat on WhatsApp</span>
+            </a>
+            <a href="../courses-offered/CoursesOffered.html" class="inline-flex items-center gap-gutter-xs px-2 py-2 font-label text-label-lg text-primary hover:underline">
+              <span>Explore Courses</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">chevron_right</span>
+            </a>
+          </div>
+
+          <ul class="flex flex-wrap items-center gap-x-gutter-lg gap-y-gutter-sm pt-gutter-xs border-t border-outline-variant/60 font-body text-body-sm text-on-surface-variant">
+            <li class="inline-flex items-center gap-gutter-xs">
+              <span class="material-symbols-outlined text-secondary text-title-md" aria-hidden="true">check_circle</span>
+              <span>Free 20-min diagnostic assessment</span>
+            </li>
+            <li class="inline-flex items-center gap-gutter-xs">
+              <span class="material-symbols-outlined text-secondary text-title-md" aria-hidden="true">check_circle</span>
+              <span>1-on-1 or max 4-student groups</span>
+            </li>
+            <li class="inline-flex items-center gap-gutter-xs">
+              <span class="material-symbols-outlined text-secondary text-title-md" aria-hidden="true">check_circle</span>
+              <span>Monthly parent progress reports</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative bg-surface-container-lowest border border-outline-variant rounded-lg p-gutter-sm shadow-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrChgFEk70t5GjL3HuiPYFB803MNk-sgQCGLEEKzEX9MtCbKHPjYBzu5CjlG1ty7sNZb56GFpP9mW03RvE77YwslSZyI7XWPHZOOon_Adg4yhQkp9scDLQCvMtR7PW88PLAK2pVGGdtfDs9Lg7KIHh_bABZohxOsJg8N_W3ZpcP83PvJdK9YQw9PylZR3q2q5P0BErTm-PCHP86BdnJMHmY3nikmRjOwa4ypeN_melWlExuk4R5k4o7o" alt="Friendly online tutoring session for K–12 students learning maths and coding" class="w-full h-auto rounded-md object-cover">
+            <div class="mt-gutter-sm bg-primary-soft border border-outline-variant rounded-md px-gutter-md py-gutter-sm flex items-center justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-9 h-9 rounded bg-primary text-on-primary inline-flex items-center justify-center shrink-0" aria-hidden="true">
+                  <span class="material-symbols-outlined text-title-md">event_available</span>
+                </span>
+                <div>
+                  <p class="font-label text-label-md text-on-primary-soft">No-obligation trial session</p>
+                  <p class="font-body text-body-sm text-on-surface-variant">Matched to your child’s grade &amp; board</p>
+                </div>
+              </div>
+              <a href="../contact/Contact.html" class="font-label text-label-md text-primary hover:underline shrink-0">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-16">
+      <div class="max-w-2xl mb-10">
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-gutter-sm text-balance" data-design-text-token="headline-lg">
+          Why families choose Insights E-Learning Academy
+        </h2>
+        <p class="font-body text-body-lg text-on-surface-variant text-pretty" data-design-text-token="body-lg">
+          Structured enough for board exams, warm enough to spark genuine curiosity every week.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+        <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col gap-gutter-md h-full">
+          <span class="w-11 h-11 rounded bg-primary-soft text-primary inline-flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined">person_check</span>
+          </span>
+          <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Personalised Learning</h3>
+          <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+            Lesson plans adapt to each student’s grade, pace, and confidence—never a one-size-fits-all script.
+          </p>
+        </article>
+
+        <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col gap-gutter-md h-full">
+          <span class="w-11 h-11 rounded bg-secondary-soft text-secondary inline-flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined">workspace_premium</span>
+          </span>
+          <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Experienced Tutors</h3>
+          <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+            Subject specialists who explain complex concepts clearly and celebrate steady progress.
+          </p>
+        </article>
+
+        <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col gap-gutter-md h-full">
+          <span class="w-11 h-11 rounded bg-primary-soft text-primary inline-flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined">menu_book</span>
+          </span>
+          <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Syllabus-Aligned</h3>
+          <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+            Mapped directly to CBSE, ICSE, and IGCSE term milestones, past papers, and school assessments.
+          </p>
+        </article>
+
+        <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col gap-gutter-md h-full">
+          <span class="w-11 h-11 rounded bg-tertiary-container text-on-tertiary-container inline-flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined">extension</span>
+          </span>
+          <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Interactive Learning</h3>
+          <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+            Hands-on coding sandboxes, visual maths puzzles, and live feedback keep students actively engaged.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Subjects Overview: Equal Weightage to Maths, Coding & Psychology -->
+    <section class="bg-surface-container-low border-y border-outline-variant py-16">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md mb-10">
+          <div class="max-w-2xl">
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-gutter-sm" data-design-text-token="headline-lg">
+              Core subjects we teach
+            </h2>
+            <p class="font-body text-body-lg text-on-surface-variant" data-design-text-token="body-lg">
+              Three balanced pillars—Maths, Coding, and Psychology—tailored to your child’s grade and syllabus.
+            </p>
+          </div>
+          <a href="../courses-offered/CoursesOffered.html" class="inline-flex items-center gap-gutter-xs font-label text-label-lg text-primary hover:underline">
+            <span>View full curriculum</span>
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg items-stretch">
+          <!-- Maths -->
+          <a href="../courses-offered/CoursesOffered.html#maths" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg hover:border-primary transition-colors duration-state-change flex flex-col justify-between gap-gutter-md h-full">
+            <div class="flex flex-col gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-primary-soft text-primary inline-flex items-center justify-center shrink-0" aria-hidden="true">
+                  <span class="material-symbols-outlined">calculate</span>
+                </span>
+                <div>
+                  <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Maths</h3>
+                  <p class="font-body text-body-sm text-secondary font-medium" data-design-text-token="body-sm">Grades 1–12 • CBSE, ICSE &amp; IGCSE</p>
+                </div>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+                Build lasting number sense, algebra, geometry, and calculus mastery through visual explanations and step-by-step board exam practice.
+              </p>
+            </div>
+            <span class="inline-flex items-center gap-gutter-xs font-label text-label-md text-primary">
+              <span>Explore Maths</span>
+              <span class="material-symbols-outlined text-label-lg" aria-hidden="true">arrow_forward</span>
+            </span>
+          </a>
+
+          <!-- Coding -->
+          <a href="../courses-offered/CoursesOffered.html#python" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg hover:border-primary transition-colors duration-state-change flex flex-col justify-between gap-gutter-md h-full">
+            <div class="flex flex-col gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-secondary-soft text-secondary inline-flex items-center justify-center shrink-0" aria-hidden="true">
+                  <span class="material-symbols-outlined">terminal</span>
+                </span>
+                <div>
+                  <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Coding</h3>
+                  <p class="font-body text-body-sm text-secondary font-medium" data-design-text-token="body-sm">Grades 1–12 • Python, Web &amp; Logic</p>
+                </div>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+                Progress from Scratch and Computational Thinking in primary grades to Python programming, responsive Web Development, and real projects.
+              </p>
+            </div>
+            <span class="inline-flex items-center gap-gutter-xs font-label text-label-md text-primary">
+              <span>Explore Coding Tracks</span>
+              <span class="material-symbols-outlined text-label-lg" aria-hidden="true">arrow_forward</span>
+            </span>
+          </a>
+
+          <!-- Psychology -->
+          <a href="../courses-offered/CoursesOffered.html#psychology" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg hover:border-primary transition-colors duration-state-change flex flex-col justify-between gap-gutter-md h-full">
+            <div class="flex flex-col gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-tertiary-container text-on-tertiary-container inline-flex items-center justify-center shrink-0" aria-hidden="true">
+                  <span class="material-symbols-outlined">psychology</span>
+                </span>
+                <div>
+                  <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Psychology</h3>
+                  <p class="font-body text-body-sm text-secondary font-medium" data-design-text-token="body-sm">Grades 9–12 • CBSE, ICSE &amp; IGCSE</p>
+                </div>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+                Master cognitive, developmental, and social psychology, research methods, and structured case-study writing with real-world examples.
+              </p>
+            </div>
+            <span class="inline-flex items-center gap-gutter-xs font-label text-label-md text-primary">
+              <span>Explore Psychology</span>
+              <span class="material-symbols-outlined text-label-lg" aria-hidden="true">arrow_forward</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grade-Wise Learning Pathway -->
+    <section class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-16">
+      <div class="max-w-2xl mb-10">
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-gutter-sm" data-design-text-token="headline-lg">
+          A clear pathway from Grade 1 to Grade 12
+        </h2>
+        <p class="font-body text-body-lg text-on-surface-variant" data-design-text-token="body-lg">
+          Skills, confidence, and academic depth grow naturally at every school stage.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg items-stretch">
+        <article class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-md h-full">
+          <span class="self-start px-3 py-1 rounded-full bg-secondary-soft text-on-secondary-soft font-label text-label-md">Grades 1–5</span>
+          <h3 class="font-headline text-title-lg text-on-surface">Strong Foundations &amp; Curiosity</h3>
+          <p class="font-body text-body-md text-on-surface-variant">
+            Build joyful number sense, logical thinking, and early problem-solving habits through guided activities and creative challenges.
+          </p>
+        </article>
+
+        <article class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-md h-full">
+          <span class="self-start px-3 py-1 rounded-full bg-primary-soft text-on-primary-soft font-label text-label-md">Grades 6–8</span>
+          <h3 class="font-headline text-title-lg text-on-surface">Concept Clarity &amp; Applied Skills</h3>
+          <p class="font-body text-body-md text-on-surface-variant">
+            Bridge core school subjects with independent reasoning, structured study habits, and hands-on analytical and coding projects.
+          </p>
+        </article>
+
+        <article class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-md h-full">
+          <span class="self-start px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label text-label-md">Grades 9–12</span>
+          <h3 class="font-headline text-title-lg text-on-surface">Board Mastery &amp; Future Depth</h3>
+          <p class="font-body text-body-md text-on-surface-variant">
+            Achieve CBSE, ICSE, and IGCSE exam readiness across Maths, Psychology, and Technology through past-paper practice and real-world projects.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Parent Testimonials -->
+    <section class="bg-surface-container-low border-y border-outline-variant py-16">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin">
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-10" data-design-text-token="headline-lg">
+          What parents &amp; students say
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg items-stretch">
+          <blockquote class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md h-full">
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              “Placeholder testimonial: My daughter went from dreading Grade 8 algebra to solving problems independently, and she genuinely looks forward to her Python sessions every Saturday.”
+            </p>
+            <footer class="pt-gutter-sm border-t border-surface-variant">
+              <p class="font-label text-label-lg text-on-surface">Priya Nair</p>
+              <p class="font-body text-body-sm text-on-surface-variant">Parent of Grade 8 CBSE Student</p>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md h-full">
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              “Placeholder testimonial: The IGCSE Psychology lessons are so well structured. Regular feedback helped my son improve his essay framing and research evaluation marks.”
+            </p>
+            <footer class="pt-gutter-sm border-t border-surface-variant">
+              <p class="font-label text-label-lg text-on-surface">Arjun Mehta</p>
+              <p class="font-body text-body-sm text-on-surface-variant">Parent of Grade 11 IGCSE Student</p>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md h-full">
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              “Placeholder testimonial: Building my first personal website in Web Development was the highlight of my term. Everything is explained patiently without rushing.”
+            </p>
+            <footer class="pt-gutter-sm border-t border-surface-variant">
+              <p class="font-label text-label-lg text-on-surface">Kavya Rao</p>
+              <p class="font-body text-body-sm text-on-surface-variant">Grade 9 ICSE Student</p>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto px-gutter-md md:px-page-margin py-16">
+      <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 text-center" data-design-text-token="headline-lg">
+        Frequently asked questions
+      </h2>
+
+      <div data-component-id="accordion-group" data-component-type="accordion" data-component-variant="group" class="flex flex-col gap-gutter-sm">
+        <details class="group bg-surface-container-lowest border border-outline-variant rounded-md px-gutter-lg py-gutter-md" open>
+          <summary class="flex items-center justify-between gap-gutter-md cursor-pointer list-none font-title text-title-md text-on-surface">
+            <span data-design-text-token="title-md">Which syllabuses do your tutors support?</span>
+            <span class="material-symbols-outlined text-primary transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="pt-gutter-sm mt-gutter-sm border-t border-surface-variant">
+            <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+              We align our academic and technology tutoring with CBSE, ICSE, and IGCSE curricula across Grades 1 to 12.
+            </p>
+          </div>
+        </details>
+
+        <details class="group bg-surface-container-lowest border border-outline-variant rounded-md px-gutter-lg py-gutter-md">
+          <summary class="flex items-center justify-between gap-gutter-md cursor-pointer list-none font-title text-title-md text-on-surface">
+            <span data-design-text-token="title-md">Are classes 1-on-1 or in small groups?</span>
+            <span class="material-symbols-outlined text-primary transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="pt-gutter-sm mt-gutter-sm border-t border-surface-variant">
+            <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+              Both options are available. Parents can choose personalised 1-on-1 tutoring or small peer groups (maximum 4 students) matched by grade and pace.
+            </p>
+          </div>
+        </details>
+
+        <details class="group bg-surface-container-lowest border border-outline-variant rounded-md px-gutter-lg py-gutter-md">
+          <summary class="flex items-center justify-between gap-gutter-md cursor-pointer list-none font-title text-title-md text-on-surface">
+            <span data-design-text-token="title-md">Does my child need prior coding experience?</span>
+            <span class="material-symbols-outlined text-primary transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="pt-gutter-sm mt-gutter-sm border-t border-surface-variant">
+            <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+              Not at all. Beginners start with visual logic or guided Python basics, while students with prior experience jump straight into intermediate projects.
+            </p>
+          </div>
+        </details>
+
+        <details class="group bg-surface-container-lowest border border-outline-variant rounded-md px-gutter-lg py-gutter-md">
+          <summary class="flex items-center justify-between gap-gutter-md cursor-pointer list-none font-title text-title-md text-on-surface">
+            <span data-design-text-token="title-md">How do parents track progress?</span>
+            <span class="material-symbols-outlined text-primary transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="pt-gutter-sm mt-gutter-sm border-t border-surface-variant">
+            <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+              Tutors share concise monthly progress summaries covering concept mastery, homework consistency, and upcoming focus areas.
+            </p>
+          </div>
+        </details>
+
+        <details class="group bg-surface-container-lowest border border-outline-variant rounded-md px-gutter-lg py-gutter-md">
+          <summary class="flex items-center justify-between gap-gutter-md cursor-pointer list-none font-title text-title-md text-on-surface">
+            <span data-design-text-token="title-md">How do we book a free consultation?</span>
+            <span class="material-symbols-outlined text-primary transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="pt-gutter-sm mt-gutter-sm border-t border-surface-variant">
+            <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+              Reach out via email, WhatsApp, or our quick Google Form. We’ll schedule a friendly 20-minute chat to understand your child’s goals.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final Call-To-Action -->
+    <section class="max-w-7xl mx-auto px-gutter-md md:px-page-margin pb-16">
+      <div class="bg-primary text-on-primary rounded-lg p-8 md:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-gutter-xl">
+        <div class="max-w-2xl flex flex-col gap-gutter-sm">
+          <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-primary text-balance">
+            Ready to find the right tutor for your child?
+          </h2>
+          <p class="font-body text-body-lg text-primary-soft text-pretty">
+            Book a free 20-minute consultation or message us directly—whichever channel is easiest for your family.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-gutter-md shrink-0">
+          <a href="https://wa.me/919148819267" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-sm px-5 py-3 rounded bg-secondary text-on-secondary font-label text-label-lg hover:opacity-90 transition-opacity">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">chat</span>
+            <span>WhatsApp Us</span>
+          </a>
+          <a href="mailto:hello@insightselearning.edu" class="inline-flex items-center gap-gutter-sm px-5 py-3 rounded bg-surface-container-lowest text-primary font-label text-label-lg hover:bg-primary-soft transition-colors">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">mail</span>
+            <span>Email Us</span>
+          </a>
+          <a href="https://forms.gle/PW5CSeiAq33RJean6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-sm px-5 py-3 rounded border border-primary-soft text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">assignment</span>
+            <span>Google Form</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant">
+    <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-xl">
+      <div class="flex flex-col gap-gutter-sm">
+        <div class="flex items-center gap-gutter-sm">
+          <span class="w-9 h-9 rounded bg-primary text-on-primary inline-flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined">school</span>
+          </span>
+          <span class="font-headline text-title-lg text-on-surface">Insights E-Learning Academy</span>
+        </div>
+        <p class="font-body text-body-sm text-on-surface-variant text-pretty">
+          Blended academic and technology tutoring for K–12 students following CBSE, ICSE, and IGCSE syllabuses.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-label text-label-lg text-on-surface mb-gutter-sm">Quick Links</h3>
+        <ul class="flex flex-col gap-gutter-xs font-body text-body-sm text-on-surface-variant">
+          <li><a href="../home/Home.html" class="hover:text-primary">Home</a></li>
+          <li><a href="../courses-offered/CoursesOffered.html" class="hover:text-primary">Courses Offered</a></li>
+          <li><a href="../our-team/OurTeam.html" class="hover:text-primary">Our Team</a></li>
+          <li><a href="../blog/Blog.html" class="hover:text-primary">Blog</a></li>
+          <li><a href="../contact/Contact.html" class="hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-label text-label-lg text-on-surface mb-gutter-sm">Enquire &amp; Connect</h3>
+        <ul class="flex flex-col gap-gutter-xs font-body text-body-sm text-on-surface-variant">
+          <li><a href="mailto:hello@insightselearning.edu" class="hover:text-primary">Email: hello@insightselearning.edu</a></li>
+          <li><a href="https://wa.me/919148819267" target="_blank" rel="noopener noreferrer" class="hover:text-primary">WhatsApp: +919148819267</a></li>
+          <li><a href="https://forms.gle/PW5CSeiAq33RJean6" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Open Enquiry Google Form</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-label text-label-lg text-on-surface mb-gutter-sm">Follow Us</h3>
+        <div class="flex flex-wrap items-center gap-gutter-sm">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"></path></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 9H16V6h-2.5C11.57 6 10 7.57 10 9.5V11H8v3h2v7h3v-7h2.5l.5-3H13V9.5c0-.28.22-.5.5-.5z"></path></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCgUqKaAxDdS5FHA3sbRzfAg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.58 7.19a2.75 2.75 0 0 0-1.94-1.95C17.93 4.75 12 4.75 12 4.75s-5.93 0-7.64.49A2.75 2.75 0 0 0 2.42 7.19 28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .42 4.81 2.75 2.75 0 0 0 1.94 1.95c1.71.49 7.64.49 7.64.49s5.93 0 7.64-.49a2.75 2.75 0 0 0 1.94-1.95A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.42-4.81zM10 15V9l5.2 3L10 15z"></path></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3.5A2.02 2.02 0 0 0 3.2 5.52a2.02 2.02 0 0 0 2.05 2.02 2.02 2.02 0 0 0 2.05-2.02A2.02 2.02 0 0 0 5.25 3.5ZM20.44 13.02c0-3.22-1.72-4.72-4.01-4.72-1.85 0-2.68 1.02-3.14 1.73V8.5H9.93c.04.98 0 11 0 11h3.36v-6.14c0-.33.02-.66.12-.9.26-.66.86-1.34 1.87-1.34 1.32 0 1.85 1 1.85 2.48V19.5h3.31v-6.48Z"></path></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant py-gutter-md px-gutter-md text-center">
+      <p class="font-body text-body-sm text-on-surface-variant">© 2026 Insights E-Learning Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isHidden));
+      });
+    }
+  </script>
+
+
+</body></html>

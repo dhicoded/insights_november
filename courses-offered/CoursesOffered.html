@@ -1,0 +1,706 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses Offered | Insights E-Learning Academy K–12 Tutoring</title>
+  <meta name="description" content="Explore K–12 Maths, Psychology, Coding with Python, Web Development, and Computational Thinking courses plus interactive learning activities.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#003E94',
+        'on-primary': '#FFFFFF',
+        'primary-container': '#1D56B8',
+        'on-primary-container': '#FFFFFF',
+        'primary-soft': '#EEF0FF',
+        'on-primary-soft': '#002D6F',
+        'secondary': '#006C4F',
+        'on-secondary': '#FFFFFF',
+        'secondary-container': '#80F9CA',
+        'on-secondary-container': '#002116',
+        'secondary-soft': '#F4FFF7',
+        'on-secondary-soft': '#003827',
+        'tertiary': '#732F00',
+        'on-tertiary': '#FFFFFF',
+        'tertiary-container': '#FFDBCB',
+        'on-tertiary-container': '#341100',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'error-container': '#FFDAD6',
+        'on-error-container': '#410002',
+        'background': '#FAF8FF',
+        'on-background': '#191B22',
+        'surface': '#FAF8FF',
+        'surface-container-lowest': '#FFFFFF',
+        'surface-container-low': '#F3F3FC',
+        'surface-container': '#EDEDF6',
+        'surface-container-high': '#E7E7F0',
+        'on-surface': '#191B22',
+        'surface-variant': '#DFE2F1',
+        'on-surface-variant': '#434652',
+        'outline': '#737784',
+        'outline-variant': '#C3C6D5',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Spline Sans"', 'sans-serif'],
+        'headline': ['"Spline Sans"', 'sans-serif'],
+        'title': ['"Outfit"', 'sans-serif'],
+        'body': ['"Outfit"', 'sans-serif'],
+        'label': ['"Outfit"', 'sans-serif'],
+        'code': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.75px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-md': ['26px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'title-lg': ['20px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'label-md': ['13px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'code-md': ['14px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '220ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500;600;700&amp;family=Outfit:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- Shared Header -->
+  <header class="sticky top-0 z-40 bg-surface-container-lowest/95 border-b border-outline-variant">
+    <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin h-20 flex items-center justify-between gap-gutter-md">
+      <a href="../home/Home.html" class="flex items-center gap-gutter-sm shrink-0">
+        <span class="w-10 h-10 rounded bg-primary text-on-primary inline-flex items-center justify-center" aria-hidden="true">
+          <span class="material-symbols-outlined">school</span>
+        </span>
+        <span class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Insights E-Learning Academy</span>
+      </a>
+
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-gutter-lg">
+        <a href="../home/Home.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Home</a>
+        <a href="../courses-offered/CoursesOffered.html" aria-current="page" class="font-label text-label-lg text-primary border-b-2 border-primary py-1">Courses Offered</a>
+        <a href="../our-team/OurTeam.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Our Team</a>
+        <a href="../blog/Blog.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Blog</a>
+        <a href="../contact/Contact.html" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-gutter-sm">
+        <a href="../contact/Contact.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="hidden sm:inline-flex items-center justify-center gap-gutter-xs px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors duration-state-change">
+          <span data-design-text-token="label-lg">Book a Free Consultation</span>
+        </a>
+        <button id="mobile-menu-btn" data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container-low">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-outline-variant px-gutter-md py-gutter-md">
+      <nav aria-label="Mobile navigation" class="flex flex-col gap-gutter-sm">
+        <a href="../home/Home.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Home</a>
+        <a href="../courses-offered/CoursesOffered.html" aria-current="page" class="px-3 py-2 rounded bg-primary-soft text-primary font-label text-label-lg">Courses Offered</a>
+        <a href="../our-team/OurTeam.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Our Team</a>
+        <a href="../blog/Blog.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Blog</a>
+        <a href="../contact/Contact.html" class="px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-low font-label text-label-lg">Contact</a>
+        <a href="../contact/Contact.html" class="mt-gutter-xs inline-flex items-center justify-center px-5 py-3 rounded bg-primary text-on-primary font-label text-label-lg">Book a Free Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- Page Intro + Fun Fact of the Day -->
+    <section class="bg-surface-container-low border-b border-outline-variant py-12">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+        <div class="lg:col-span-7 flex flex-col gap-gutter-sm">
+          <h1 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface" data-design-text-token="display-lg">
+            Courses Offered
+          </h1>
+          <p class="font-body text-body-lg text-on-surface-variant max-w-prose">
+            Tailored CBSE, ICSE, and IGCSE programmes designed to strengthen school fundamentals while building lasting coding and thinking skills.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-tertiary-container text-on-tertiary-container rounded-md p-gutter-lg border border-outline-variant flex flex-col gap-gutter-sm">
+            <div class="flex items-center justify-between gap-gutter-sm">
+              <span class="inline-flex items-center gap-gutter-xs font-label text-label-md uppercase">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">lightbulb</span>
+                <span>Fun Fact of the Day</span>
+              </span>
+              <button id="next-fact-btn" type="button" class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label text-label-sm border border-outline-variant hover:bg-surface-container-low">
+                Next Fact
+              </button>
+            </div>
+            <p id="fun-fact-text" class="font-body text-body-md">
+              In Python, the language wasn’t named after the snake—Guido van Rossum named it after the comedy group Monty Python!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 Subject Course Cards -->
+    <section class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-xl items-stretch">
+
+        <!-- Maths -->
+        <article id="maths" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col justify-between gap-gutter-md h-full">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-start justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-primary-soft text-primary inline-flex items-center justify-center" aria-hidden="true">
+                  <span class="material-symbols-outlined">calculate</span>
+                </span>
+                <div>
+                  <h2 class="font-headline text-headline-md text-on-surface">Maths</h2>
+                  <p class="font-label text-label-md text-secondary">Suitable Grades: Grades 1–12</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-surface-container-low font-label text-label-sm text-on-surface-variant">CBSE • ICSE • IGCSE</span>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Concept-first mathematics tutoring that turns memorised formulas into intuitive reasoning and confident exam performance.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md bg-surface-container-low rounded p-gutter-md">
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Key Topics Covered</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Number systems &amp; mental arithmetic</li>
+                  <li>Algebra, linear &amp; quadratic equations</li>
+                  <li>Geometry, trigonometry &amp; mensuration</li>
+                  <li>Statistics, probability &amp; calculus</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Learning Outcomes</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Stronger problem-solving accuracy</li>
+                  <li>Faster step-by-step exam strategies</li>
+                  <li>Lasting confidence in word problems</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <footer class="pt-gutter-sm border-t border-surface-variant">
+            <a href="../contact/Contact.html?subject=Maths" class="inline-flex items-center gap-gutter-sm px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors">
+              <span>Enquire About This Course</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </footer>
+        </article>
+
+        <!-- Psychology -->
+        <article id="psychology" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col justify-between gap-gutter-md h-full">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-start justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-tertiary-container text-on-tertiary-container inline-flex items-center justify-center" aria-hidden="true">
+                  <span class="material-symbols-outlined">psychology</span>
+                </span>
+                <div>
+                  <h2 class="font-headline text-headline-md text-on-surface">Psychology</h2>
+                  <p class="font-label text-label-md text-secondary">Suitable Grades: Grades 9–12</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-surface-container-low font-label text-label-sm text-on-surface-variant">CBSE • ICSE • IGCSE</span>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Engaging exploration of human behaviour, memory, research methods, and psychological wellbeing tailored for high-school boards.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md bg-surface-container-low rounded p-gutter-md">
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Key Topics Covered</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Cognitive psychology &amp; memory models</li>
+                  <li>Developmental &amp; social psychology</li>
+                  <li>Research methods &amp; experimental design</li>
+                  <li>Case-study analysis &amp; essay structure</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Learning Outcomes</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Clear scientific evaluation skills</li>
+                  <li>High-scoring structured board answers</li>
+                  <li>Deeper empathy &amp; self-awareness</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <footer class="pt-gutter-sm border-t border-surface-variant">
+            <a href="../contact/Contact.html?subject=Psychology" class="inline-flex items-center gap-gutter-sm px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors">
+              <span>Enquire About This Course</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </footer>
+        </article>
+
+        <!-- Coding with Python -->
+        <article id="python" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col justify-between gap-gutter-md h-full">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-start justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-secondary-soft text-secondary inline-flex items-center justify-center" aria-hidden="true">
+                  <span class="material-symbols-outlined">terminal</span>
+                </span>
+                <div>
+                  <h2 class="font-headline text-headline-md text-on-surface">Coding with Python</h2>
+                  <p class="font-label text-label-md text-secondary">Suitable Grades: Grades 6–12</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-surface-container-low font-label text-label-sm text-on-surface-variant">Project-Based</span>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Hands-on programming in Python, guiding students from their very first variables to building games, data visualisations, and CBSE/ICSE/IGCSE Computer Science projects.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md bg-surface-container-low rounded p-gutter-md">
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Key Topics Covered</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Variables, conditionals &amp; loops</li>
+                  <li>Functions, lists, tuples &amp; dictionaries</li>
+                  <li>Object-oriented programming &amp; file I/O</li>
+                  <li>SQL connectivity &amp; AI/ML logic basics</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Sample Student Projects</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Turtle Art &amp; Interactive Quiz Game (Gr 6–8)</li>
+                  <li>Personal Expense &amp; Grade Tracker (Gr 9–10)</li>
+                  <li>Data Visualiser &amp; Mini Chatbot (Gr 11–12)</li>
+                </ul>
+              </div>
+            </div>
+            <p class="font-body text-body-sm text-on-surface-variant">
+              <strong>Tools &amp; Format:</strong> Thonny / VS Code, live pair-coding, weekly mini-challenges, and board practical exam prep.
+            </p>
+          </div>
+          <footer class="pt-gutter-sm border-t border-surface-variant">
+            <a href="../contact/Contact.html?subject=Coding%20with%20Python" class="inline-flex items-center gap-gutter-sm px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors">
+              <span>Enquire About This Course</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </footer>
+        </article>
+
+        <!-- Web Development -->
+        <article id="webdev" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col justify-between gap-gutter-md h-full">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-start justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-primary-soft text-primary inline-flex items-center justify-center" aria-hidden="true">
+                  <span class="material-symbols-outlined">web</span>
+                </span>
+                <div>
+                  <h2 class="font-headline text-headline-md text-on-surface">Web Development</h2>
+                  <p class="font-label text-label-md text-secondary">Suitable Grades: Grades 6–12</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-surface-container-low font-label text-label-sm text-on-surface-variant">HTML • CSS • JS</span>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Students learn how the modern web works by designing, coding, and publishing their own responsive multi-page websites from scratch.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md bg-surface-container-low rounded p-gutter-md">
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Key Topics Covered</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Semantic HTML5 &amp; accessibility basics</li>
+                  <li>CSS Flexbox, Grid &amp; responsive breakpoints</li>
+                  <li>JavaScript DOM events &amp; form validation</li>
+                  <li>Hosting &amp; version control with GitHub</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Sample Student Projects</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Personal Portfolio &amp; Hobby Showcase</li>
+                  <li>Interactive Flashcard Study App</li>
+                  <li>Responsive School Club Landing Page</li>
+                </ul>
+              </div>
+            </div>
+            <p class="font-body text-body-sm text-on-surface-variant">
+              <strong>Learning Outcomes:</strong> Confidently build mobile-friendly layouts, debug browser DevTools, and publish live web projects.
+            </p>
+          </div>
+          <footer class="pt-gutter-sm border-t border-surface-variant">
+            <a href="../contact/Contact.html?subject=Web%20Development" class="inline-flex items-center gap-gutter-sm px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors">
+              <span>Enquire About This Course</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </footer>
+        </article>
+
+        <!-- Computational Thinking -->
+        <article id="computational" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg shadow-sm flex flex-col justify-between gap-gutter-md h-full lg:col-span-2">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-start justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-11 h-11 rounded bg-secondary-soft text-secondary inline-flex items-center justify-center" aria-hidden="true">
+                  <span class="material-symbols-outlined">hub</span>
+                </span>
+                <div>
+                  <h2 class="font-headline text-headline-md text-on-surface">Computational Thinking</h2>
+                  <p class="font-label text-label-md text-secondary">Suitable Grades: Grades 1–12</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-surface-container-low font-label text-label-sm text-on-surface-variant">Core Logic</span>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant max-w-prose">
+              Develops structured problem-solving—decomposition, pattern recognition, abstraction, and algorithmic reasoning—that boosts performance across Maths, Science, and Computer Science.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md bg-surface-container-low rounded p-gutter-md">
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Grades 1–5 (Visual Logic)</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Scratch, Blockly &amp; Code.org</li>
+                  <li>Sequences, loops &amp; storytelling</li>
+                  <li>Pattern &amp; logic puzzles</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Grades 6–8 (Bridge to Code)</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Flowcharts &amp; pseudocode</li>
+                  <li>MIT App Inventor beginner apps</li>
+                  <li>Searching &amp; sorting strategies</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-label text-label-md text-on-surface mb-gutter-xs">Grades 9–12 (Senior Track)</h3>
+                <ul class="font-body text-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+                  <li>Java, C++ &amp; algorithm efficiency</li>
+                  <li>Data handling, SQL &amp; AI/ML basics</li>
+                  <li>Bebras &amp; Olympiad problem prep</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <footer class="pt-gutter-sm border-t border-surface-variant">
+            <a href="../contact/Contact.html?subject=Computational%20Thinking" class="inline-flex items-center gap-gutter-sm px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors">
+              <span>Enquire About This Course</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Detailed Grade-Wise Learning Pathway -->
+    <section class="bg-surface-container-low border-y border-outline-variant py-16">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin">
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">
+          Grade-wise Learning Pathway
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg items-stretch">
+          <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-sm h-full">
+            <span class="self-start px-3 py-1 rounded-full bg-secondary-soft text-on-secondary-soft font-label text-label-md">Grades 1–5</span>
+            <h3 class="font-headline text-title-lg text-on-surface">Focus: Logic, sequences, creativity, and foundational problem-solving</h3>
+            <p class="font-body text-body-sm text-on-surface-variant">
+              <strong>Tools &amp; topics:</strong> Scratch, Blockly, Code.org, basic logic, patterns, sequences, and creative projects.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-sm h-full">
+            <span class="self-start px-3 py-1 rounded-full bg-primary-soft text-on-primary-soft font-label text-label-md">Grades 6–8</span>
+            <h3 class="font-headline text-title-lg text-on-surface">Focus: Syntax transition and simple app development</h3>
+            <p class="font-body text-body-sm text-on-surface-variant">
+              <strong>Tools &amp; topics:</strong> Python, HTML/CSS, MIT App Inventor, basic programming concepts, simple websites, and beginner apps.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-sm h-full">
+            <span class="self-start px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label text-label-md">Grades 9–12</span>
+            <h3 class="font-headline text-title-lg text-on-surface">Focus: Algorithms, data, and real-world projects</h3>
+            <p class="font-body text-body-sm text-on-surface-variant">
+              <strong>Tools &amp; topics:</strong> Java, C++, JavaScript, SQL, AI/ML concepts, data handling, algorithms, and project-based learning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Learning Elements -->
+    <section class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-16">
+      <div class="max-w-2xl mb-10">
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface mb-gutter-sm">
+          Try a quick interactive challenge
+        </h2>
+        <p class="font-body text-body-lg text-on-surface-variant">
+          A small taste of how our tutors turn every subject into an active discovery session.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-lg items-stretch">
+        <!-- Maths: Guess the Next Number -->
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-primary">Maths • Number Pattern</span>
+            <h3 class="font-headline text-title-lg text-on-surface">Guess the Next Number</h3>
+            <p class="font-body text-body-md text-on-surface-variant">What comes next in: <span class="font-code text-code-md text-on-surface">2, 6, 12, 20, 30, ?</span></p>
+            <div class="flex items-center gap-gutter-sm">
+              <input id="maths-input" type="number" placeholder="Your answer" class="w-32 rounded border border-outline-variant px-3 py-2 font-body text-body-md">
+              <button id="maths-check-btn" type="button" class="px-4 py-2 rounded bg-primary text-on-primary font-label text-label-md hover:bg-primary-container">Check</button>
+            </div>
+            <p id="maths-feedback" class="font-body text-body-sm text-on-surface-variant min-h-5"></p>
+          </div>
+        </div>
+
+        <!-- Psychology: How Do You Learn Best? -->
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-tertiary">Psychology • Mini-Quiz</span>
+            <h3 class="font-headline text-title-lg text-on-surface">How Do You Learn Best?</h3>
+            <p class="font-body text-body-md text-on-surface-variant">When revising a new chapter, what helps it stick fastest?</p>
+            <div class="flex flex-col gap-gutter-xs">
+              <button type="button" data-psych-answer="Visual" class="psych-opt text-left px-3 py-2 rounded border border-outline-variant hover:bg-surface-container-low font-body text-body-sm">Drawing mind maps &amp; diagrams</button>
+              <button type="button" data-psych-answer="Active Recall" class="psych-opt text-left px-3 py-2 rounded border border-outline-variant hover:bg-surface-container-low font-body text-body-sm">Explaining it aloud to someone</button>
+              <button type="button" data-psych-answer="Kinesthetic" class="psych-opt text-left px-3 py-2 rounded border border-outline-variant hover:bg-surface-container-low font-body text-body-sm">Solving hands-on practice puzzles</button>
+            </div>
+            <p id="psych-feedback" class="font-body text-body-sm text-secondary min-h-5"></p>
+          </div>
+        </div>
+
+        <!-- Coding with Python: Predict the Output -->
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-secondary">Python • Predict the Output</span>
+            <h3 class="font-headline text-title-lg text-on-surface">What will this print?</h3>
+            <pre class="bg-surface-container-low border border-outline-variant rounded p-gutter-sm font-code text-code-md text-on-surface overflow-x-auto">score = 3
+for i in range(2):
+    score = score * 2
+print(score)</pre>
+            <div class="flex flex-wrap gap-gutter-xs">
+              <button type="button" data-py-ans="6" class="py-opt px-3 py-1.5 rounded border border-outline-variant hover:bg-surface-container-low font-code text-code-md">6</button>
+              <button type="button" data-py-ans="12" class="py-opt px-3 py-1.5 rounded border border-outline-variant hover:bg-surface-container-low font-code text-code-md">12</button>
+              <button type="button" data-py-ans="24" class="py-opt px-3 py-1.5 rounded border border-outline-variant hover:bg-surface-container-low font-code text-code-md">24</button>
+            </div>
+            <p id="py-feedback" class="font-body text-body-sm text-on-surface-variant min-h-5"></p>
+          </div>
+        </div>
+
+        <!-- Web Development: Change the Button Colour -->
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-primary">Web Dev • Live CSS Challenge</span>
+            <h3 class="font-headline text-title-lg text-on-surface">Change the Button Colour</h3>
+            <p class="font-body text-body-sm text-on-surface-variant">Click a style class to update the live button below:</p>
+            <div class="flex flex-wrap gap-gutter-xs">
+              <button type="button" data-btn-bg="bg-primary" class="web-opt px-3 py-1 rounded bg-surface-container-low border border-outline-variant font-code text-label-sm">bg-primary</button>
+              <button type="button" data-btn-bg="bg-secondary" class="web-opt px-3 py-1 rounded bg-surface-container-low border border-outline-variant font-code text-label-sm">bg-secondary</button>
+              <button type="button" data-btn-bg="bg-tertiary" class="web-opt px-3 py-1 rounded bg-surface-container-low border border-outline-variant font-code text-label-sm">bg-tertiary</button>
+            </div>
+            <div class="pt-gutter-xs">
+              <button id="live-demo-btn" type="button" class="px-5 py-2.5 rounded bg-primary text-on-primary font-label text-label-md transition-colors">Preview Button</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Computational Thinking: Logic Puzzle -->
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-gutter-md md:col-span-2">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-secondary">Computational Thinking • Logic Puzzle</span>
+            <h3 class="font-headline text-title-lg text-on-surface">Spot the Odd Pattern Out</h3>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Three of these steps belong to making a sandwich in order, and one breaks the sequence. Which step is out of order?
+            </p>
+            <div class="flex flex-wrap gap-gutter-sm">
+              <button type="button" data-ct-ans="wrong" class="ct-opt px-4 py-2 rounded border border-outline-variant hover:bg-surface-container-low font-body text-body-sm">1. Take two slices of bread</button>
+              <button type="button" data-ct-ans="correct" class="ct-opt px-4 py-2 rounded border border-outline-variant hover:bg-surface-container-low font-body text-body-sm">2. Pack lunchbox before adding filling</button>
+              <button type="button" data-ct-ans="wrong" class="ct-opt px-4 py-2 rounded border border-outline-variant hover:bg-surface-container-low font-body text-body-sm">3. Spread jam evenly</button>
+            </div>
+            <p id="ct-feedback" class="font-body text-body-sm text-on-surface-variant min-h-5"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant">
+    <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-xl">
+      <div class="flex flex-col gap-gutter-sm">
+        <div class="flex items-center gap-gutter-sm">
+          <span class="w-9 h-9 rounded bg-primary text-on-primary inline-flex items-center justify-center" aria-hidden="true">
+            <span class="material-symbols-outlined">school</span>
+          </span>
+          <span class="font-headline text-title-lg text-on-surface">Insights E-Learning Academy</span>
+        </div>
+        <p class="font-body text-body-sm text-on-surface-variant text-pretty">
+          Blended academic and technology tutoring for K–12 students following CBSE, ICSE, and IGCSE syllabuses.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-label text-label-lg text-on-surface mb-gutter-sm">Quick Links</h3>
+        <ul class="flex flex-col gap-gutter-xs font-body text-body-sm text-on-surface-variant">
+          <li><a href="../home/Home.html" class="hover:text-primary">Home</a></li>
+          <li><a href="../courses-offered/CoursesOffered.html" class="hover:text-primary">Courses Offered</a></li>
+          <li><a href="../our-team/OurTeam.html" class="hover:text-primary">Our Team</a></li>
+          <li><a href="../blog/Blog.html" class="hover:text-primary">Blog</a></li>
+          <li><a href="../contact/Contact.html" class="hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-label text-label-lg text-on-surface mb-gutter-sm">Enquire &amp; Connect</h3>
+        <ul class="flex flex-col gap-gutter-xs font-body text-body-sm text-on-surface-variant">
+          <li><a href="mailto:hello@insightselearning.edu" class="hover:text-primary">Email: hello@insightselearning.edu</a></li>
+          <li><a href="https://wa.me/919148819267" target="_blank" rel="noopener noreferrer" class="hover:text-primary">WhatsApp: +919148819267</a></li>
+          <li><a href="https://forms.gle/PW5CSeiAq33RJean6" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Open Enquiry Google Form</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-label text-label-lg text-on-surface mb-gutter-sm">Follow Us</h3>
+        <div class="flex flex-wrap items-center gap-gutter-sm">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"></path></svg></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 9H16V6h-2.5C11.57 6 10 7.57 10 9.5V11H8v3h2v7h3v-7h2.5l.5-3H13V9.5c0-.28.22-.5.5-.5z"></path></svg></a>
+          <a href="https://www.youtube.com/channel/UCgUqKaAxDdS5FHA3sbRzfAg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.58 7.19a2.75 2.75 0 0 0-1.94-1.95C17.93 4.75 12 4.75 12 4.75s-5.93 0-7.64.49A2.75 2.75 0 0 0 2.42 7.19 28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .42 4.81 2.75 2.75 0 0 0 1.94 1.95c1.71.49 7.64.49 7.64.49s5.93 0 7.64-.49a2.75 2.75 0 0 0 1.94-1.95A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.42-4.81zM10 15V9l5.2 3L10 15z"></path></svg></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3.5A2.02 2.02 0 0 0 3.2 5.52a2.02 2.02 0 0 0 2.05 2.02 2.02 2.02 0 0 0 2.05-2.02A2.02 2.02 0 0 0 5.25 3.5ZM20.44 13.02c0-3.22-1.72-4.72-4.01-4.72-1.85 0-2.68 1.02-3.14 1.73V8.5H9.93c.04.98 0 11 0 11h3.36v-6.14c0-.33.02-.66.12-.9.26-.66.86-1.34 1.87-1.34 1.32 0 1.85 1 1.85 2.48V19.5h3.31v-6.48Z"></path></svg></a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-9 h-9 rounded border border-outline-variant inline-flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant py-gutter-md px-gutter-md text-center">
+      <p class="font-body text-body-sm text-on-surface-variant">© 2026 Insights E-Learning Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isHidden));
+      });
+    }
+
+    // Fun Fact Rotator
+    const facts = [
+      "In Python, the language wasn’t named after the snake—Guido van Rossum named it after the comedy group Monty Python!",
+      "Zero is the only number that cannot be represented in Roman numerals.",
+      "Psychology studies show spacing revision over 3 short sessions beats cramming in one long night.",
+      "The very first computer bug was an actual moth found inside a relay of the Harvard Mark II computer in 1947."
+    ];
+    let factIdx = 0;
+    const factText = document.getElementById('fun-fact-text');
+    document.getElementById('next-fact-btn')?.addEventListener('click', () => {
+      factIdx = (factIdx + 1) % facts.length;
+      if (factText) factText.textContent = facts[factIdx];
+    });
+
+    // Maths Check
+    document.getElementById('maths-check-btn')?.addEventListener('click', () => {
+      const val = document.getElementById('maths-input')?.value.trim();
+      const fb = document.getElementById('maths-feedback');
+      if (!fb) return;
+      if (val === '42') {
+        fb.textContent = 'Spot on! Each gap increases by 2 (+4, +6, +8, +10, +12).';
+        fb.className = 'font-body text-body-sm text-secondary min-h-5';
+      } else {
+        fb.textContent = 'Not quite—look at the difference between each pair of numbers!';
+        fb.className = 'font-body text-body-sm text-error min-h-5';
+      }
+    });
+
+    // Psychology Mini-Quiz
+    document.querySelectorAll('.psych-opt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const style = btn.getAttribute('data-psych-answer');
+        const fb = document.getElementById('psych-feedback');
+        if (fb) fb.textContent = `You lean toward ${style} learning—our tutors weave this right into your study plan!`;
+      });
+    });
+
+    // Python Predict Output
+    document.querySelectorAll('.py-opt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const ans = btn.getAttribute('data-py-ans');
+        const fb = document.getElementById('py-feedback');
+        if (!fb) return;
+        if (ans === '12') {
+          fb.textContent = 'Correct! 3 × 2 = 6, then 6 × 2 = 12.';
+          fb.className = 'font-body text-body-sm text-secondary min-h-5';
+        } else {
+          fb.textContent = 'Close! Remember the loop runs twice (range(2)).';
+          fb.className = 'font-body text-body-sm text-error min-h-5';
+        }
+      });
+    });
+
+    // Web Dev Live Button Colour
+    const demoBtn = document.getElementById('live-demo-btn');
+    document.querySelectorAll('.web-opt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const bgClass = btn.getAttribute('data-btn-bg');
+        if (demoBtn && bgClass) {
+          demoBtn.classList.remove('bg-primary', 'bg-secondary', 'bg-tertiary');
+          demoBtn.classList.add(bgClass);
+        }
+      });
+    });
+
+    // Computational Thinking Puzzle
+    document.querySelectorAll('.ct-opt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const isCorrect = btn.getAttribute('data-ct-ans') === 'correct';
+        const fb = document.getElementById('ct-feedback');
+        if (!fb) return;
+        if (isCorrect) {
+          fb.textContent = 'Nice catch! Packing before adding the filling breaks the algorithm sequence.';
+          fb.className = 'font-body text-body-sm text-secondary min-h-5';
+        } else {
+          fb.textContent = 'That step fits the sandwich order—try another option!';
+          fb.className = 'font-body text-body-sm text-error min-h-5';
+        }
+      });
+    });
+  </script>
+
+
+</body></html>
