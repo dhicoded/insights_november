@@ -1,8 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights E-Learning Academy | Launch Website</title>
-  <meta name="description" content="Launch the Insights E-Learning Academy K–12 online tutoring website.">
+  <title>Insights by MJ Academy — Maths, Coding &amp; Psychology (Grades 6–12)</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
 globalThis.tailwind = globalThis.tailwind || {};
@@ -105,32 +104,661 @@ globalThis.tailwind.config = {
 };
 if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 </script>
-  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500;600;700&amp;family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@600;700&amp;family=Outfit:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
 </head>
-<body class="bg-surface text-on-surface font-body antialiased min-h-[1024px] flex items-center justify-center p-gutter-md" data-stitch-vh="min-h-[1024px]===min-h-screen">
+<body class="bg-surface text-on-surface font-body antialiased">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
 
-  <main class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 md:p-12 max-w-lg w-full text-center shadow-sm flex flex-col items-center gap-gutter-lg">
-    <span class="w-14 h-14 rounded-md bg-primary text-on-primary inline-flex items-center justify-center" aria-hidden="true">
-      <span class="material-symbols-outlined text-headline-md">school</span>
-    </span>
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-30 bg-surface border-b border-outline-variant/70">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin h-16 flex items-center justify-between gap-gutter-md">
+        <a href="#top" class="flex items-center gap-gutter-sm shrink-0 focus-visible:outline-2 focus-visible:outline-primary rounded">
+          <span class="w-9 h-9 rounded bg-primary text-on-primary inline-flex items-center justify-center">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">school</span>
+          </span>
+          <span class="font-headline text-title-lg text-on-surface whitespace-nowrap" data-design-text-token="title-lg">Insights by MJ Academy</span>
+        </a>
 
-    <div class="flex flex-col gap-gutter-sm">
-      <h1 class="font-display text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
-        Insights E-Learning Academy
-      </h1>
-      <p class="font-body text-body-md text-on-surface-variant text-pretty">
-        Personalised K–12 tutoring for CBSE, ICSE, and IGCSE students across Maths, Coding, and Psychology.
-      </p>
-    </div>
+        <nav class="hidden md:flex items-center gap-gutter-xl" aria-label="Primary navigation">
+          <a href="#subjects" class="font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change ease-state-change" data-design-text-token="label-lg">Subjects</a>
+          <a href="#formats" class="font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change ease-state-change" data-design-text-token="label-lg">Class Formats</a>
+          <a href="#faq" class="font-body text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change ease-state-change" data-design-text-token="label-lg">Parent FAQs</a>
+        </nav>
 
-    <a href="./home/Home.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-gutter-sm px-6 py-3 rounded bg-primary text-on-primary font-label text-label-lg hover:bg-primary-container transition-colors duration-state-change">
-      <span data-design-text-token="label-lg">Open Website</span>
-      <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
-    </a>
-  </main>
+        <div class="flex items-center gap-gutter-sm">
+          <!-- COMPONENT: button-primary -->
+          <a href="#trial-booking" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-md md:px-gutter-lg py-3 rounded bg-primary text-on-primary hover:bg-primary-container focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-state-change ease-state-change">
+            <span class="font-body text-label-lg whitespace-nowrap" data-design-text-token="label-lg">Book Free Trial</span>
+          </a>
 
+          <!-- COMPONENT: button-icon -->
+          <button id="mobile-menu-toggle" data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Open navigation menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded bg-surface-container-low text-on-surface hover:bg-surface-container border border-outline-variant/60">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Drawer -->
+      <div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/70 bg-surface-container-lowest px-gutter-md py-gutter-md">
+        <nav class="flex flex-col gap-gutter-sm" aria-label="Mobile navigation">
+          <a href="#subjects" class="px-gutter-sm py-2 rounded font-body text-label-lg text-on-surface hover:bg-surface-container-low" data-design-text-token="label-lg">Subjects</a>
+          <a href="#formats" class="px-gutter-sm py-2 rounded font-body text-label-lg text-on-surface hover:bg-surface-container-low" data-design-text-token="label-lg">Class Formats</a>
+          <a href="#faq" class="px-gutter-sm py-2 rounded font-body text-label-lg text-on-surface hover:bg-surface-container-low" data-design-text-token="label-lg">Parent FAQs</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="flex-1">
+
+      <!-- Hero Section -->
+      <section class="py-gutter-xl md:py-section">
+        <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+          <div class="lg:col-span-7 flex flex-col gap-gutter-lg items-start">
+            <!-- COMPONENT: chip-with-icon -->
+            <span data-component-id="chip-with-icon" data-component-type="chip" data-component-variant="with-icon" class="inline-flex items-center gap-gutter-xs px-gutter-md py-1.5 rounded-full bg-primary-soft text-on-primary-soft border border-primary/20">
+              <span class="material-symbols-outlined text-body-md" aria-hidden="true">verified</span>
+              <span class="font-body text-label-md" data-design-text-token="label-md">Grades 6–12 • CBSE, ICSE &amp; IGCSE</span>
+            </span>
+
+            <h1 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface text-balance" data-design-text-token="display-lg">
+              Live Maths, Coding &amp; Psychology classes built for Grades 6–12
+            </h1>
+
+            <p class="font-body text-body-lg text-on-surface-variant max-w-prose text-pretty" data-design-text-token="body-lg">
+              Help your child build lasting academic confidence with dedicated 1-on-1 mentoring or collaborative small-group cohorts led by vetted subject specialists.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-gutter-md">
+              <!-- COMPONENT: button-with-icon -->
+              <a href="#trial-booking" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-primary text-on-primary hover:bg-primary-container focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-state-change ease-state-change">
+                <span class="material-symbols-outlined text-title-lg" aria-hidden="true">calendar_month</span>
+                <span class="font-body text-label-lg" data-design-text-token="label-lg">Book a Free Trial Class</span>
+              </a>
+
+              <!-- COMPONENT: button-secondary -->
+              <a href="#formats" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-surface-container-lowest text-primary border border-outline-variant hover:bg-primary-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-state-change ease-state-change">
+                <span class="font-body text-label-lg" data-design-text-token="label-lg">Compare 1-on-1 &amp; Group</span>
+              </a>
+            </div>
+
+            <!-- Parent Trust Strip -->
+            <div class="w-full pt-gutter-md border-t border-outline-variant/70 grid grid-cols-1 sm:grid-cols-3 gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-9 h-9 rounded bg-secondary-soft text-on-secondary-soft inline-flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-title-lg" aria-hidden="true">groups</span>
+                </span>
+                <div class="flex flex-col">
+                  <span class="font-headline text-title-md text-on-surface tabular-nums" data-design-text-token="title-md">1-on-1 or Max 6</span>
+                  <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Two focused formats</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-9 h-9 rounded bg-primary-soft text-on-primary-soft inline-flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-title-lg" aria-hidden="true">assignment_turned_in</span>
+                </span>
+                <div class="flex flex-col">
+                  <span class="font-headline text-title-md text-on-surface tabular-nums" data-design-text-token="title-md">Weekly Reports</span>
+                  <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Clear parent updates</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-9 h-9 rounded bg-tertiary-container text-on-tertiary-container inline-flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-title-lg" aria-hidden="true">schedule</span>
+                </span>
+                <div class="flex flex-col">
+                  <span class="font-headline text-title-md text-on-surface tabular-nums" data-design-text-token="title-md">Free Trial Class</span>
+                  <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Diagnostic + roadmap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col gap-gutter-md">
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-gutter-sm shadow-sm">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCZeEthSmjCavxvJAPCnxk5lhulgfHYWeHXd3k3Ltq5Y2CjUpcijNHJU3j16hVywF1uN8aXwRffmpLiUcca0e8mvtH_6xCI13ZbAG-64TLbmOukf4s-VywE3uiIwAY8GVsd5aAIK5D1Ab7QTrLUEvO8B5WHXFS-zslhkTnGEUhwuJMXietXVyC6ggHGzwBYPE0Pa-AWSAz3lgETz2dSJs9rkcFEu9bQ-g_bCbphHgRJ5vFvstgoWENQ" alt="Grade 9 student learning live online with a mentor at a sunlit study desk" class="w-full aspect-[4/3] object-cover rounded-md">
+            </div>
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-md px-gutter-lg py-gutter-md flex items-center justify-between gap-gutter-md">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container inline-flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-body-lg" aria-hidden="true">trending_up</span>
+                </span>
+                <div class="flex flex-col">
+                  <span class="font-body text-label-md text-on-surface" data-design-text-token="label-md">Parent-approved</span>
+                  <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Aligned to school exams</span>
+                </div>
+              </div>
+              <span class="font-body text-label-sm px-gutter-sm py-1 rounded-full bg-secondary-soft text-on-secondary-soft shrink-0" data-design-text-token="label-sm">Grades 6–12</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subjects Section -->
+      <section id="subjects" class="py-gutter-xl md:py-section bg-surface-container-low border-y border-outline-variant/60">
+        <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin flex flex-col gap-gutter-xl">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter-lg">
+            <div class="flex flex-col gap-gutter-sm max-w-2xl">
+              <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance" data-design-text-token="headline-lg">
+                Three core subjects, tailored to every grade band
+              </h2>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                Filter by your child&#39;s current grade to preview what they will master in Maths, Coding, and Psychology.
+              </p>
+            </div>
+
+            <!-- Grade Filter Chips -->
+            <div class="flex flex-wrap items-center gap-gutter-sm" role="group" aria-label="Filter syllabus by grade band">
+              <button type="button" data-grade-filter="all" data-component-id="chip-filter-active" data-component-type="chip" data-component-variant="filter" aria-pressed="true" class="grade-chip inline-flex items-center px-gutter-md py-gutter-sm rounded-full bg-primary text-on-primary border border-primary transition-colors duration-state-change ease-state-change">
+                <span class="font-body text-label-md" data-design-text-token="label-md">All Grades 6–12</span>
+              </button>
+              <button type="button" data-grade-filter="6-8" data-component-id="chip-filter" data-component-type="chip" data-component-variant="filter" aria-pressed="false" class="grade-chip inline-flex items-center px-gutter-md py-gutter-sm rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary hover:text-primary transition-colors duration-state-change ease-state-change">
+                <span class="font-body text-label-md" data-design-text-token="label-md">Grades 6–8</span>
+              </button>
+              <button type="button" data-grade-filter="9-10" data-component-id="chip-filter" data-component-type="chip" data-component-variant="filter" aria-pressed="false" class="grade-chip inline-flex items-center px-gutter-md py-gutter-sm rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary hover:text-primary transition-colors duration-state-change ease-state-change">
+                <span class="font-body text-label-md" data-design-text-token="label-md">Grades 9–10</span>
+              </button>
+              <button type="button" data-grade-filter="11-12" data-component-id="chip-filter" data-component-type="chip" data-component-variant="filter" aria-pressed="false" class="grade-chip inline-flex items-center px-gutter-md py-gutter-sm rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary hover:text-primary transition-colors duration-state-change ease-state-change">
+                <span class="font-body text-label-md" data-design-text-token="label-md">Grades 11–12</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3 Subject Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 items-stretch gap-gutter-lg">
+
+            <!-- Mathematics -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden shadow-sm flex flex-col justify-between">
+              <div class="flex flex-col">
+                <div class="p-gutter-sm pb-0">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrCdCWBBZxuv04f881iCHm1g7OsPaJK8gga-Yk8lZ-rGU07Wya4jt8HtTZ-KiGybRajmjS0XoKavT3B_rlPduLL7F9bTrByWxTf3lwjn0Es4WE6WkfmfOn8chE_HP4MinuSNlrVmFM1PdUC0Te5goICWx1wpC86e-KJvLTFCAPu9qjWWIRfPsLgxBiTX9a2BzlRKDGgnZYu293jRlYa2TJ_Aty2KrSpDBi3L4gYCK1EVM1HYO0Tau54w" alt="Geometric blocks, compass, and graph notebook representing Mathematics" class="w-full h-48 object-cover rounded">
+                </div>
+                <header class="px-gutter-lg pt-gutter-md pb-gutter-xs flex items-center justify-between gap-gutter-sm">
+                  <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Mathematics</h3>
+                  <span class="font-body text-label-sm px-gutter-sm py-1 rounded-full bg-primary-soft text-on-primary-soft" data-design-text-token="label-sm">Grades 6–12</span>
+                </header>
+                <div class="px-gutter-lg pb-gutter-md flex flex-col gap-gutter-sm">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+                    Visual concept building and step-by-step exam problem solving across CBSE, ICSE, and IGCSE boards.
+                  </p>
+                  <div class="bg-surface-container-low rounded p-gutter-md flex flex-col gap-gutter-xs">
+                    <span class="font-body text-label-sm text-primary" data-design-text-token="label-sm">Focus for selected grades</span>
+                    <p id="syllabus-maths" class="font-body text-body-sm text-on-surface text-balance" data-design-text-token="body-sm">
+                      Integers &amp; Algebra (6–8) • Trigonometry &amp; Quadratics (9–10) • Calculus &amp; Vectors (11–12)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <footer class="px-gutter-lg pb-gutter-lg pt-gutter-xs">
+                <button type="button" data-book-subject="Mathematics" class="book-subject-btn w-full inline-flex items-center justify-center gap-gutter-xs px-gutter-md py-2.5 rounded bg-primary-soft text-on-primary-soft hover:bg-primary hover:text-on-primary transition-colors duration-state-change ease-state-change">
+                  <span class="font-body text-label-lg" data-design-text-token="label-lg">Book Free Maths Trial</span>
+                  <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Coding -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden shadow-sm flex flex-col justify-between">
+              <div class="flex flex-col">
+                <div class="p-gutter-sm pb-0">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrBEskun4gP43UbEijerMREDay9N5t_67b8qESNfnoQB6Fl_piFOlOClymfbitJS06D0_VoVCKubuA8qgDevN_yFUESP2c75h1BX1-ZLIMhQy9lOXYSgfnzEkfVrMPjIRqG-szFI_yteW4QVAiHmB-hBV1sqsS4glnyScSG-fTh5D17_0VG4JVfBV9--CicNIpoR-3SaALfh220gUxLqpDqodSQCBf9--o5vv3_fhNeRC5CYo41E_WKYew" alt="Laptop displaying clean Python and web development code" class="w-full h-48 object-cover rounded">
+                </div>
+                <header class="px-gutter-lg pt-gutter-md pb-gutter-xs flex items-center justify-between gap-gutter-sm">
+                  <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Coding &amp; Python</h3>
+                  <span class="font-body text-label-sm px-gutter-sm py-1 rounded-full bg-secondary-soft text-on-secondary-soft" data-design-text-token="label-sm">Grades 6–12</span>
+                </header>
+                <div class="px-gutter-lg pb-gutter-md flex flex-col gap-gutter-sm">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+                    From computational logic to real Python apps and modern web projects—no copy-paste templates.
+                  </p>
+                  <div class="bg-surface-container-low rounded p-gutter-md flex flex-col gap-gutter-xs">
+                    <span class="font-body text-label-sm text-secondary" data-design-text-token="label-sm">Focus for selected grades</span>
+                    <p id="syllabus-coding" class="font-body text-body-sm text-on-surface text-balance" data-design-text-token="body-sm">
+                      Python &amp; Logic (6–8) • Web Apps &amp; JS (9–10) • Data Structures &amp; APIs (11–12)
+                    </p>
+                    <code class="font-code text-code-md text-on-primary-soft bg-primary-soft/70 px-gutter-sm py-1 rounded mt-1 block" data-design-text-token="code-md">def build_project(grade): return &#34;live_app&#34;</code>
+                  </div>
+                </div>
+              </div>
+              <footer class="px-gutter-lg pb-gutter-lg pt-gutter-xs">
+                <button type="button" data-book-subject="Coding" class="book-subject-btn w-full inline-flex items-center justify-center gap-gutter-xs px-gutter-md py-2.5 rounded bg-secondary-soft text-on-secondary-soft hover:bg-secondary hover:text-on-secondary transition-colors duration-state-change ease-state-change">
+                  <span class="font-body text-label-lg" data-design-text-token="label-lg">Book Free Coding Trial</span>
+                  <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Psychology -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden shadow-sm flex flex-col justify-between">
+              <div class="flex flex-col">
+                <div class="p-gutter-sm pb-0">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrAZAtPHyBueZOP_o0UGZHnbTKT--g7GtJqqBSWdKXOkcUkRs7pCqszYQnmL0iZOYu6fuTbEUmisqqfb4uzMW3R0JYz8mZ5NrM5KSvCYyexThbHr5vjJgnxaU8Nyt8BIwDNbf_xtVChtJIMwRznwygFEvAGGTOE3Il0LORLMohK6a7RPPZ0N4-iiaj8AwQdtrr_dZrz7cIaLIj88Gq5my6Dz5pcNvYNJrAQD0ZvsTwuhvpSIG8HdqH3QQwwd_6E" alt="Abstract geometric illustration representing cognitive psychology and human behavior" class="w-full h-48 object-cover rounded">
+                </div>
+                <header class="px-gutter-lg pt-gutter-md pb-gutter-xs flex items-center justify-between gap-gutter-sm">
+                  <h3 class="font-headline text-title-lg text-on-surface" data-design-text-token="title-lg">Psychology</h3>
+                  <span class="font-body text-label-sm px-gutter-sm py-1 rounded-full bg-tertiary-container text-on-tertiary-container" data-design-text-token="label-sm">Grades 6–12</span>
+                </header>
+                <div class="px-gutter-lg pb-gutter-md flex flex-col gap-gutter-sm">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">
+                    Structured exploration of memory, emotion, research methods, and case-study writing for school &amp; board exams.
+                  </p>
+                  <div class="bg-surface-container-low rounded p-gutter-md flex flex-col gap-gutter-xs">
+                    <span class="font-body text-label-sm text-tertiary" data-design-text-token="label-sm">Focus for selected grades</span>
+                    <p id="syllabus-psychology" class="font-body text-body-sm text-on-surface text-balance" data-design-text-token="body-sm">
+                      Study Habits &amp; Focus (6–8) • Social &amp; Cognitive Intro (9–10) • Board Exam Case Studies (11–12)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <footer class="px-gutter-lg pb-gutter-lg pt-gutter-xs">
+                <button type="button" data-book-subject="Psychology" class="book-subject-btn w-full inline-flex items-center justify-center gap-gutter-xs px-gutter-md py-2.5 rounded bg-tertiary-container text-on-tertiary-container hover:bg-tertiary hover:text-on-tertiary transition-colors duration-state-change ease-state-change">
+                  <span class="font-body text-label-lg" data-design-text-token="label-lg">Book Free Psychology Trial</span>
+                  <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+                </button>
+              </footer>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Two Class Formats Section -->
+      <section id="formats" class="py-gutter-xl md:py-section">
+        <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin flex flex-col gap-gutter-xl">
+          <div class="flex flex-col gap-gutter-sm max-w-2xl">
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance" data-design-text-token="headline-lg">
+              Two class formats designed around how your child learns best
+            </h2>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Choose personalised 1-on-1 mentoring or a small-group cohort of peers in the same grade band. You can switch formats anytime.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 items-stretch gap-gutter-lg">
+
+            <!-- 1-on-1 Format Card -->
+            <!-- COMPONENT: card-elevated -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full bg-surface-container-lowest border-2 border-primary rounded-md p-gutter-lg md:p-gutter-xl shadow-sm flex flex-col justify-between gap-gutter-lg">
+              <div class="flex flex-col gap-gutter-md">
+                <header class="flex items-start justify-between gap-gutter-md">
+                  <div class="flex flex-col gap-gutter-xs">
+                    <span class="font-body text-label-md text-primary" data-design-text-token="label-md">Personalised Pace</span>
+                    <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">1-on-1 Tutoring</h3>
+                  </div>
+                  <span class="w-11 h-11 rounded bg-primary-soft text-on-primary-soft inline-flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-headline-md" aria-hidden="true">person</span>
+                  </span>
+                </header>
+
+                <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Ideal for students who want undivided mentor attention, custom pacing around school tests, or targeted exam preparation.
+                </p>
+
+                <ul class="flex flex-col gap-gutter-sm pt-gutter-xs">
+                  <li class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-primary text-title-lg shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="font-body text-body-md text-on-surface" data-design-text-token="body-md">Curriculum mapped directly to your child&#39;s school calendar</span>
+                  </li>
+                  <li class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-primary text-title-lg shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="font-body text-body-md text-on-surface" data-design-text-token="body-md">Flexible scheduling with free 24-hour rescheduling</span>
+                  </li>
+                  <li class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-primary text-title-lg shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="font-body text-body-md text-on-surface" data-design-text-token="body-md">Bi-weekly parent check-in and detailed mastery tracker</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Group Format Card -->
+            <!-- COMPONENT: card-elevated -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg md:p-gutter-xl shadow-sm flex flex-col justify-between gap-gutter-lg">
+              <div class="flex flex-col gap-gutter-md">
+                <header class="flex items-start justify-between gap-gutter-md">
+                  <div class="flex flex-col gap-gutter-xs">
+                    <span class="font-body text-label-md text-secondary" data-design-text-token="label-md">Max 6 Students per Cohort</span>
+                    <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Group Cohorts</h3>
+                  </div>
+                  <span class="w-11 h-11 rounded bg-secondary-soft text-on-secondary-soft inline-flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-headline-md" aria-hidden="true">groups</span>
+                  </span>
+                </header>
+
+                <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Ideal for students who thrive on peer discussion, collaborative coding demos, and structured weekly study habits.
+                </p>
+
+                <ul class="flex flex-col gap-gutter-sm pt-gutter-xs">
+                  <li class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-secondary text-title-lg shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="font-body text-body-md text-on-surface" data-design-text-token="body-md">Grouped strictly by grade band (6–8, 9–10, or 11–12)</span>
+                  </li>
+                  <li class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-secondary text-title-lg shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="font-body text-body-md text-on-surface" data-design-text-token="body-md">Live Q&amp;A, peer challenges, and guided project critiques</span>
+                  </li>
+                  <li class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-secondary text-title-lg shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="font-body text-body-md text-on-surface" data-design-text-token="body-md">Recorded session replays plus monthly parent progress summary</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="flex justify-center pt-gutter-xs">
+            <!-- COMPONENT: button-with-icon -->
+            <a href="#trial-booking" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-xl py-3 rounded bg-primary text-on-primary hover:bg-primary-container focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-state-change ease-state-change">
+              <span class="material-symbols-outlined text-title-lg" aria-hidden="true">calendar_month</span>
+              <span class="font-body text-label-lg" data-design-text-token="label-lg">Book a Free Trial Class</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parent FAQ Section -->
+      <section id="faq" class="py-gutter-xl md:py-section bg-surface-container-low border-y border-outline-variant/60">
+        <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+          <div class="lg:col-span-5 flex flex-col gap-gutter-sm">
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance" data-design-text-token="headline-lg">
+              Questions parents ask before booking
+            </h2>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Everything you need to know about our trial sessions, curriculum boards, and how we keep parents informed.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7">
+            <!-- COMPONENT: accordion-group -->
+            <div data-component-id="accordion-group" data-component-type="accordion" data-component-variant="group" class="flex flex-col gap-gutter-sm">
+              <details class="group bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden" open>
+                <summary class="flex items-center justify-between gap-gutter-md px-gutter-lg py-gutter-md cursor-pointer list-none select-none hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-primary">
+                  <span class="font-body text-title-md text-on-surface" data-design-text-token="title-md">What happens during the free trial class?</span>
+                  <span class="material-symbols-outlined text-primary transition-transform duration-state-change ease-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+                </summary>
+                <div class="px-gutter-lg pb-gutter-md pt-gutter-xs border-t border-outline-variant/50">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">Your child meets a subject specialist for a live, interactive 30-minute mini-lesson tailored to their grade, followed by a 15-minute parent debrief with a personalised learning roadmap.</p>
+                </div>
+              </details>
+
+              <details class="group bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden">
+                <summary class="flex items-center justify-between gap-gutter-md px-gutter-lg py-gutter-md cursor-pointer list-none select-none hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-primary">
+                  <span class="font-body text-title-md text-on-surface" data-design-text-token="title-md">Which school boards do you support for Maths and Psychology?</span>
+                  <span class="material-symbols-outlined text-primary transition-transform duration-state-change ease-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+                </summary>
+                <div class="px-gutter-lg pb-gutter-md pt-gutter-xs border-t border-outline-variant/50">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">We align directly with CBSE, ICSE, and Cambridge IGCSE syllabi across Grades 6–12, including board exam past-paper practice for Grades 10 and 12.</p>
+                </div>
+              </details>
+
+              <details class="group bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden">
+                <summary class="flex items-center justify-between gap-gutter-md px-gutter-lg py-gutter-md cursor-pointer list-none select-none hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-primary">
+                  <span class="font-body text-title-md text-on-surface" data-design-text-token="title-md">Can my child combine 1-on-1 Maths with Group Coding?</span>
+                  <span class="material-symbols-outlined text-primary transition-transform duration-state-change ease-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+                </summary>
+                <div class="px-gutter-lg pb-gutter-md pt-gutter-xs border-t border-outline-variant/50">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">Yes. Many families choose 1-on-1 mentoring for exam-heavy subjects like Maths or Grade 11–12 Psychology, and a small-group cohort for project-based Coding.</p>
+                </div>
+              </details>
+
+              <details class="group bg-surface-container-lowest border border-outline-variant rounded-md overflow-hidden">
+                <summary class="flex items-center justify-between gap-gutter-md px-gutter-lg py-gutter-md cursor-pointer list-none select-none hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-primary">
+                  <span class="font-body text-title-md text-on-surface" data-design-text-token="title-md">How do parents track progress each week?</span>
+                  <span class="material-symbols-outlined text-primary transition-transform duration-state-change ease-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+                </summary>
+                <div class="px-gutter-lg pb-gutter-md pt-gutter-xs border-t border-outline-variant/50">
+                  <p class="font-body text-body-md text-on-surface-variant" data-design-text-token="body-md">After every week of classes, parents receive a concise summary covering topics mastered, practice accuracy, and upcoming school-test readiness.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book Free Trial & Contact Section -->
+      <section id="trial-booking" class="py-gutter-xl md:py-section">
+        <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+
+          <div class="lg:col-span-6 flex flex-col gap-gutter-lg">
+            <div class="flex flex-col gap-gutter-sm">
+              <span class="font-body text-label-md text-primary" data-design-text-token="label-md">No Payment Required</span>
+              <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface" data-design-text-token="headline-lg">
+                Book a free trial class
+              </h2>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                Share your child&#39;s grade, subject, and preferred class format. We will match them with a specialist mentor and send your trial link within 2 hours.
+              </p>
+            </div>
+
+            <div class="bg-surface-container-low border border-outline-variant/70 rounded-md p-gutter-lg flex flex-col gap-gutter-md">
+              <div class="flex items-start gap-gutter-sm">
+                <span class="w-7 h-7 rounded-full bg-primary text-on-primary inline-flex items-center justify-center font-body text-label-sm shrink-0 tabular-nums">1</span>
+                <div class="flex flex-col">
+                  <span class="font-body text-label-lg text-on-surface" data-design-text-token="label-lg">Live interactive session</span>
+                  <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Your child solves real problems at their comfort level.</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-gutter-sm">
+                <span class="w-7 h-7 rounded-full bg-primary text-on-primary inline-flex items-center justify-center font-body text-label-sm shrink-0 tabular-nums">2</span>
+                <div class="flex flex-col">
+                  <span class="font-body text-label-lg text-on-surface" data-design-text-token="label-lg">Parent roadmap debrief</span>
+                  <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Clear strengths assessment and format recommendation.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-gutter-lg md:p-gutter-xl shadow-sm flex flex-col gap-gutter-lg">
+              <div class="flex flex-col gap-gutter-xs">
+                <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Contact &amp; book via WhatsApp or Google Form</h3>
+                <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Message our admissions team directly on WhatsApp or submit your child&#39;s details through our quick Google Form.
+                </p>
+              </div>
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-gutter-md">
+                <a href="https://wa.me/919986659719?text=Hi%20Insights%20by%20MJ%20Academy%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class." target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-secondary text-on-secondary hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-opacity duration-state-change ease-state-change">
+                  <span class="material-symbols-outlined text-title-lg" aria-hidden="true">chat</span>
+                  <span class="font-body text-label-lg whitespace-nowrap" data-design-text-token="label-lg">Chat on WhatsApp</span>
+                </a>
+                <a href="https://forms.gle/Wx8tkq7uo3tqSCuAA" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-primary text-on-primary hover:bg-primary-container focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-state-change ease-state-change">
+                  <span class="material-symbols-outlined text-title-lg" aria-hidden="true">assignment</span>
+                  <span class="font-body text-label-lg whitespace-nowrap" data-design-text-token="label-lg">Book via Google Form</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/70 py-gutter-xl">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin flex flex-col gap-gutter-lg">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-gutter-md">
+          <div class="flex flex-col gap-gutter-xs">
+            <span class="font-headline text-title-md text-on-surface" data-design-text-token="title-md">Insights by MJ Academy</span>
+            <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Live 1-on-1 &amp; Small-Group Classes • Maths, Coding &amp; Psychology • Grades 6–12</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-gutter-lg">
+            <a href="#subjects" class="font-body text-body-sm text-on-surface-variant hover:text-primary" data-design-text-token="body-sm">Subjects</a>
+            <a href="#formats" class="font-body text-body-sm text-on-surface-variant hover:text-primary" data-design-text-token="body-sm">Class Formats</a>
+            <a href="#faq" class="font-body text-body-sm text-on-surface-variant hover:text-primary" data-design-text-token="body-sm">Parent FAQs</a>
+            <a href="#trial-booking" class="font-body text-body-sm text-primary hover:underline" data-design-text-token="body-sm">Book Free Trial</a>
+          </div>
+        </div>
+
+        <div class="pt-gutter-md border-t border-outline-variant/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-gutter-md">
+          <span class="font-body text-body-sm text-on-surface-variant" data-design-text-token="body-sm">Connect with Insights by MJ Academy</span>
+          <div class="flex flex-wrap items-center gap-gutter-md">
+            <a href="https://www.youtube.com/channel/UCgUqKaAxDdS5FHA3sbRzfAg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-xs px-gutter-md py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-colors duration-state-change ease-state-change">
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">smart_display</span>
+              <span class="font-body text-label-md" data-design-text-token="label-md">YouTube</span>
+            </a>
+            <a href="https://wa.me/919986659719?text=Hi%20Insights%20by%20MJ%20Academy%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-xs px-gutter-md py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant text-secondary hover:border-secondary transition-colors duration-state-change ease-state-change">
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">chat</span>
+              <span class="font-body text-label-md" data-design-text-token="label-md">WhatsApp</span>
+            </a>
+            <a href="https://forms.gle/Wx8tkq7uo3tqSCuAA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-xs px-gutter-md py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant text-primary hover:border-primary transition-colors duration-state-change ease-state-change">
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">assignment</span>
+              <span class="font-body text-label-md" data-design-text-token="label-md">Google Form</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function () {
+          const isHidden = mobileNav.classList.contains('hidden');
+          mobileNav.classList.toggle('hidden', !isHidden);
+          mobileToggle.setAttribute('aria-expanded', String(isHidden));
+        });
+      }
+
+      const syllabusMap = {
+        all: {
+          maths: 'Integers & Algebra (6–8) • Trigonometry & Quadratics (9–10) • Calculus & Vectors (11–12)',
+          coding: 'Python & Logic (6–8) • Web Apps & JS (9–10) • Data Structures & APIs (11–12)',
+          psychology: 'Study Habits & Focus (6–8) • Social & Cognitive Intro (9–10) • Board Exam Case Studies (11–12)'
+        },
+        '6-8': {
+          maths: 'Number sense, ratios, linear equations, and visual geometry foundations.',
+          coding: 'Scratch-to-Python transition, loops, functions, and interactive mini-games.',
+          psychology: 'Attention, memory techniques, growth mindset, and curiosity labs.'
+        },
+        '9-10': {
+          maths: 'Quadratic equations, coordinate geometry, trigonometry, and board exam drills.',
+          coding: 'Python problem solving, responsive HTML/CSS/JS web apps, and debugging.',
+          psychology: 'Perception, learning theories, social behavior, and structured note-taking.'
+        },
+        '11-12': {
+          maths: 'Differential & integral calculus, probability, matrices, and past-paper mastery.',
+          coding: 'Data structures, object-oriented Python, APIs, and capstone portfolios.',
+          psychology: 'Cognitive processes, research methods, disorders, and board-ready case essays.'
+        }
+      };
+
+      const gradeChips = document.querySelectorAll('.grade-chip');
+      const mathsCopy = document.getElementById('syllabus-maths');
+      const codingCopy = document.getElementById('syllabus-coding');
+      const psychCopy = document.getElementById('syllabus-psychology');
+
+      gradeChips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          const band = chip.getAttribute('data-grade-filter');
+          gradeChips.forEach(function (c) {
+            const active = c === chip;
+            c.setAttribute('aria-pressed', String(active));
+            c.setAttribute('data-component-id', active ? 'chip-filter-active' : 'chip-filter');
+            c.classList.toggle('bg-primary', active);
+            c.classList.toggle('text-on-primary', active);
+            c.classList.toggle('border-primary', active);
+            c.classList.toggle('bg-surface-container-lowest', !active);
+            c.classList.toggle('text-on-surface-variant', !active);
+            c.classList.toggle('border-outline-variant', !active);
+          });
+          if (syllabusMap[band]) {
+            mathsCopy.textContent = syllabusMap[band].maths;
+            codingCopy.textContent = syllabusMap[band].coding;
+            psychCopy.textContent = syllabusMap[band].psychology;
+          }
+        });
+      });
+
+      let selectedFormat = '1-on-1';
+      const formatBtns = document.querySelectorAll('.format-option-btn');
+      function setFormat(format) {
+        selectedFormat = format;
+        formatBtns.forEach(function (btn) {
+          const active = btn.getAttribute('data-format-option') === format;
+          btn.setAttribute('aria-pressed', String(active));
+          btn.classList.toggle('border-2', active);
+          btn.classList.toggle('border-primary', active);
+          btn.classList.toggle('bg-primary-soft', active);
+          btn.classList.toggle('text-on-primary-soft', active);
+          btn.classList.toggle('border', !active);
+          btn.classList.toggle('border-outline-variant', !active);
+          btn.classList.toggle('bg-surface-container-lowest', !active);
+          btn.classList.toggle('text-on-surface-variant', !active);
+        });
+      }
+
+      formatBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setFormat(btn.getAttribute('data-format-option'));
+        });
+      });
+
+      const bookingSection = document.getElementById('trial-booking');
+      const subjectSelect = document.getElementById('trial-subject');
+
+      document.querySelectorAll('.book-subject-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (subjectSelect) {
+            subjectSelect.value = btn.getAttribute('data-book-subject');
+          }
+          if (bookingSection) {
+            bookingSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      document.querySelectorAll('.book-format-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setFormat(btn.getAttribute('data-book-format'));
+          if (bookingSection) {
+            bookingSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      const form = document.getElementById('trial-form');
+      const formError = document.getElementById('form-error');
+      const confirmation = document.getElementById('trial-confirmation');
+      const confirmationSummary = document.getElementById('confirmation-summary');
+      const resetBtn = document.getElementById('reset-trial-form');
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('parent-name').value.trim();
+          const email = document.getElementById('parent-email').value.trim();
+          const grade = document.getElementById('student-grade').value;
+          const subject = subjectSelect.value;
+
+          if (!name || !email || email.indexOf('@') === -1) {
+            formError.classList.remove('hidden');
+            return;
+          }
+          formError.classList.add('hidden');
+          form.classList.add('hidden');
+          confirmation.classList.remove('hidden');
+          confirmation.classList.add('flex');
+          confirmationSummary.textContent = 'Thank you, ' + name + '. We have reserved a free ' + selectedFormat + ' ' + subject + ' trial class for ' + grade + ' and will send the session link to ' + email + '.';
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          confirmation.classList.add('hidden');
+          confirmation.classList.remove('flex');
+          form.classList.remove('hidden');
+        });
+      }
+    })();
+  </script>
 
 
 </body></html>
